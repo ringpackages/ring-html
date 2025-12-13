@@ -1,0 +1,3 @@
+[submodule "src/c_src/lexbor"]
+	path = src/c_src/lexbor
+	url = https://github.com/lexbor/lexbor
