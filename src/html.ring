@@ -22,6 +22,11 @@ class HTML
 		next
 		return aResult
 
+	# Find all elements matching a CSS selector and return attribute values
+	# Returns: list of attribute value strings
+	func findAttr selector, attrName
+		return html_find_attr(pDoc, selector, attrName)
+
 	# Get the <body> element
 	# Returns: HTMLNode or NULL
 	func body
@@ -95,6 +100,14 @@ class HTMLNode
 			aResult + new HTMLNode(node)
 		next
 		return aResult
+
+	# Find descendant elements matching a CSS selector and return attribute values
+	# Returns: list of attribute value strings
+	func findAttr selector, attrName
+		if isNull(pNode)
+			return []
+		ok
+		return html_find_attr(pNode, selector, attrName)
 
 	# Get the combined text content of this node and its descendants
 	func text
