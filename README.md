@@ -96,6 +96,7 @@ The main document parser class.
 |--------|-------------|
 | `new HTML(html)` | Parse HTML string and create document |
 | `find(selector)` | Find all elements matching CSS selector → `[HTMLNode, ...]` |
+| `findAttr(selector, attrName)` | Find all elements matching CSS selector and return attribute values → `[string, ...]` |
 | `body()` | Get the `<body>` element → `HTMLNode` |
 | `head()` | Get the `<head>` element → `HTMLNode` |
 | `root()` / `html()` | Get the `<html>` root element → `HTMLNode` |
@@ -130,6 +131,7 @@ Represents a DOM node with full navigation and manipulation capabilities.
 | Method | Description |
 |--------|-------------|
 | `find(selector)` | Find descendants matching selector |
+| `findAttr(selector, attrName)` | Find descendants matching selector and return attribute values → `[string, ...]` |
 | `parent()` | Get parent node |
 | `children()` | Get all child nodes → `[HTMLNode, ...]` |
 | `firstChild()` | Get first child element |
